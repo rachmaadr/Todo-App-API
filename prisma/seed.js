@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 const prisma = new PrismaClient();
 async function seed() {
   console.info("Start Seeding...");
-  for (let i = 0; i < 65; i++) {
+  for (let i = 0; i < 50; i++) {
     await prisma.todos.create({
       data: {
         title: faker.lorem.words(faker.number.int({ min: 4, max: 6 })),
